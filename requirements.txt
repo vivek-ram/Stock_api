@@ -1,0 +1,9 @@
+tensorflow-cpu
+fastapi
+uvicorn[standard]
+numpy
+pandas
+yahoo_sin
+pybase64
+pydantic
+gunicorn==20.0.4
