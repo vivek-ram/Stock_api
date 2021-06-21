@@ -3,7 +3,7 @@ fastapi
 uvicorn[standard]
 numpy
 pandas
-yahoo_sin
+yahoo-finance
 pybase64
 pydantic
 gunicorn==20.0.4
