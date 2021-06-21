@@ -4,6 +4,7 @@ uvicorn[standard]
 numpy
 pandas
 yahoo-finance
+yahoo-fin==0.8.8
 pybase64
 pydantic
 gunicorn==20.0.4
