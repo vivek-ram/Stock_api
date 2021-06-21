@@ -14,6 +14,7 @@ import time
 from tensorflow.keras.layers import LSTM
 
 
+EPOCHS = 2
 n_steps=30
 N_LAYERS = 2
 # LSTM cell
@@ -219,7 +220,7 @@ model = create_model(n_steps, 5, loss=LOSS, units=UNITS, cell=CELL, n_layers=N_L
                     dropout=DROPOUT, optimizer=OPTIMIZER, bidirectional=BIDIRECTIONAL)
 
 def train(data,epochs):
-    model.fit(data["X_train"], data["y_train"],batch_size=BATCH_SIZE,epochs=epochs,validation_data=(data["X_test"], data["y_test"]),verbose=2)
+    model.fit(data["X_train"], data["y_train"],batch_size=BATCH_SIZE,epochs=epochs,validation_data=(data["X_test"], data["y_test"]),verbose=2,callbacks=[checkpointer])
 
 
 
