@@ -28,6 +28,7 @@ app = FastAPI()
 async def predict_image(item:Item):
         setparam(item.epochs)
         print(item.epochs)
+        print(item.preddays)
         createdata = create_data(item.ticker,int(item.preddays))
         modeltrain = train(createdata,item.epochs)
         result =  str(predict(createdata))
